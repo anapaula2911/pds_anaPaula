@@ -1,0 +1,92 @@
+﻿<Window x:Class="pds_anaPaula.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pds_anaPaula"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#fbcb6c"/>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Width="40" Height="40" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left">
+                <Image Source="../Recursos/Imagens/adicionar-usuario.png"/>
+            </Button>
+
+            <Button Grid.Column="1" Width="40" Height="40" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Right">
+                <Image Source="../Recursos/Imagens/sair.png"/>
+            </Button>
+        </Grid>   
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Background="#fbcb6c"/>
+            <Border Grid.Column="1" Background="#9aa8d9"/>
+
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500">
+                <TextBlock Text="Acesse o sistema" HorizontalAlignment="Center" FontSize="28" Margin="0 0 0 10"/>
+                
+                <WrapPanel Height="30" Width="230" HorizontalAlignment="Center">
+                    <Image Source="../Recursos/Imagens/perfil-de-usuario.png"/>
+                    <Label Content="Usuário:" FontSize="18"/>
+                </WrapPanel>
+                
+                <TextBox Width="230" Padding="5" Margin="0 0 0 10">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                
+                <WrapPanel Height="30" Width="230" HorizontalAlignment="Center">
+                    <Image Source="../Recursos/Imagens/senha.png"/>
+                    <Label Content="Senha:" FontSize="18"/>
+                </WrapPanel>
+                
+                <TextBox Width="230" Padding="5" Margin="0 0 0 10">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <Grid Height="30" Width="350">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Width="100" Content="Limpar" Background="#BBC2FF">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Grid.Column="1" Width="100" Content="Acessar" Background="#BBC2FF">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
